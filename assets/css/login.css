@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #eeeeee;
+	font-family: "Roboto", sans-serif;
+}
+
+.contenedor {
+	background: #fff;
+	width: 90%;
+	max-width: 1000px;
+	height: 95vh;
+	margin: 20px auto;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	border-radius: 10px;
+
+	display: grid;
+	grid-template-areas: "side-izquierdo side-derecho";
+}
+
+.contenedor .side-izquierdo {
+	grid-area: side-izquierdo;
+	display: flex;
+	justify-content: center;
+	border-radius: 10px;
+}
+.titulos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.titulos h1 {
+	background: -webkit-linear-gradient(#186234, #148c42);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.titulos h4 {
+	background: -webkit-linear-gradient(#186234, #148c42);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.titulos .img-login {
+	min-height: 110px;
+	min-width: 78px;
+	position: relative;
+	background-size: cover;
+}
+
+.contenedor .side-derecho {
+	background: linear-gradient(to bottom, #186234 0%, #148c42 100%);
+	color: white;
+	grid-area: side-derecho;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.side-derecho .header {
+	display: flex;
+	flex-direction: column;
+	line-height: 2rem;
+	padding-right: 70px;
+}
+
+.side-derecho .input-contenedor {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.header h2 {
+	font-size: 30px;
+}
+
+.header p {
+	font-size: 20px;
+}
+.side-derecho .input-contenedor input[type="text"],
+.side-derecho .input-contenedor input[type="password"] {
+	display: block;
+	width: 350px;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	outline: none;
+}
+
+.input-contenedor input[type="text"]:focus,
+.input-contenedor input[type="password"]:focus {
+	border: 2px solid #192a3e;
+}
+
+.side-derecho .btn {
+	text-decoration: none;
+	border-radius: 5px;
+	border: 2px solid #192a3e;
+	color: #fff;
+	background-color: #192a3e;
+	cursor: pointer;
+	font-size: 16px;
+	width: 350px;
+	height: 50px;
+	margin-bottom: 6px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.side-derecho .btn:hover {
+	background-color: #0f1624;
+	border-color: #0f1624;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.input-contenedor p {
+	align-self: center;
+	font-size: 15px;
+}
+.input-contenedor a {
+	text-decoration: none;
+	color: #192a3e;
+}
+
+.input-contenedor a:hover {
+	color: #0f1624;
+}
+
+@media screen and (max-width: 988px) {
+	.contenedor .side-izquierdo {
+		grid-area: side-derecho;
+		display: none;
+	}
+	.contenedor {
+		grid-template-areas: "side-derecho";
+	}
+}
+@media screen and (max-width: 402px) {
+	.header h2 {
+		font-size: 20px;
+	}
+
+	.header p {
+		font-size: 12px;
+	}
+	.side-derecho .header {
+		padding-right: 5px;
+	}
+	.side-derecho .input-contenedor {
+		justify-content: center;
+		align-items: center;
+	}
+	.side-derecho .btn {
+		width: 200px;
+	}
+	.side-derecho .input-contenedor input[type="text"],
+	.side-derecho .input-contenedor input[type="password"] {
+		width: 200px;
+		padding: 0.375rem 0.75rem;
+	}
+}
+
+@media screen and (max-width: 232px) {
+	.side-derecho .header {
+		padding-left: 20px;
+	}
+	.side-derecho .input-contenedor {
+		justify-content: center;
+		align-items: center;
+	}
+	.side-derecho .btn {
+		width: 110px;
+		font-size: 9px;
+	}
+	.side-derecho .input-contenedor input[type="text"],
+	.side-derecho .input-contenedor input[type="password"] {
+		width: 110px;
+		padding: 0.375rem 0.75rem;
+	}
+
+	.input-contenedor p,
+	a {
+		font-size: 9px;
+	}
+}

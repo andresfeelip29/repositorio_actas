@@ -1,0 +1,44 @@
+{
+	"site": [
+		{
+			"site": "",
+			"access": "public",
+			"role": ""
+		},
+		{
+			"site": "dashboard",
+			"access": "private",
+			"role": "Funcionario"
+		},
+		{
+			"site": "dashboard",
+			"access": "private",
+			"role": "Secretaria"
+		},
+		{
+			"site": "generaracta",
+			"access": "private",
+			"role": "Funcionario"
+		},
+		{
+			"site": "veracta",
+			"access": "private",
+			"role": "Secretaria"
+		},
+		{
+			"site": "veracta",
+			"access": "private",
+			"role": "Funcionario"
+		},
+		{
+			"site": "responsableacta",
+			"access": "private",
+			"role": "Funcionario"
+		}
+	],
+
+	"default-site": {
+		"Funcionario": "dashboard",
+		"Secretaria": "dashboard"
+	}
+}
